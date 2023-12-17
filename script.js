@@ -170,6 +170,10 @@ function processMoreWeatherDetails(data) {
             </div>
         </div>
         <div class="small-box">
+            <h5 class="my-0 light-text">Country</h5>
+            <p class="my-0 highlight-2">${data.sys.country}</p>
+        </div>
+        <div class="small-box">
             <h5 class="my-0 light-text">Date</h5>
             <p class="my-0 highlight-2">${fullDate}</p>
         </div>
