@@ -72,17 +72,10 @@ function processMoreCountryDetails(data) {
                 <div class="image-holder">
                     <img class="image" src="${data.coatOfArms.svg}" alt="CoatOfArms">
                 </div>
-            </div>
-            <div class="w-100 small-box">
-                <div class="map-container">
-                    <div id="map" class="w-100 h-100"></div>
-                </div>
-            </div>
+            </div>            
         </div>        
     </div>
     `;
-
-    mapping(data);
 
 }
 
@@ -136,9 +129,8 @@ function processWeather(data) {
         </div>
         <div id="more-details-weather"></div> 
     </div>
-        
-    
     `;
+
 }
 
 function moreDetailsWeatherButton() {
@@ -250,27 +242,6 @@ function imageData(data) {
     }
 
     return "images/" + img;
-}
-
-
-function mapping(data) {
-    // Creating map options
-    var latlng = data.capitalInfo.latlng;
-    console.log(latlng);
-
-    let mapOptions = {
-        center: latlng,
-        zoom: 6
-    }
-        
-    let map = new L.map('map' , mapOptions);
-    
-    let layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
-    map.addLayer(layer);
-    
-    let marker = new L.Marker(latlng);
-    marker.addTo(map);
-    
 }
 
 
